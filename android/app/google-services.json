@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "320707129575",
+    "project_id": "streetbank-770a1",
+    "storage_bucket": "streetbank-770a1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:320707129575:android:773f6ae471ecd33ceff242",
+        "android_client_info": {
+          "package_name": "com.example.streetbank"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "320707129575-9jd20nmj8reftbi5dqc0ob19a4gn6v1e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2YO-n6BUEq4Ak_RAYa8HbmQH_roFcCLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "320707129575-9jd20nmj8reftbi5dqc0ob19a4gn6v1e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

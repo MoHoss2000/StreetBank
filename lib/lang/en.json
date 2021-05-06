@@ -1,0 +1,58 @@
+{
+    "signin": "Sign In",
+    "enter_email": "Enter Email",
+    "enter_password": "Enter Password",
+    "submit": "Submit",
+    "forgot_password": "Forgot Password?",
+    "no_account": "Don't have an account? Signup Here.",
+    "reset_password_title": "Reset your StreetBank password",
+    "reset_password_content": "Submit your mail and we will send you an email to reset your password",
+    "cancel": "Cancel",
+    "email":"Email",
+
+    "signup":"Sign Up",
+    "first_name":"First Name",
+    "last_name":"Last Name",
+    "enter_phone":"Enter Phone",
+    "confirm_password":"Confirm Password",
+    "have_account":"Already have an account? Signin Here.",
+
+    "name":"Name",
+    "phone":"Phone",
+
+    "region":"Region",
+    "search":"Search",
+
+    "messages":"Messages",
+
+    "message_box":"Start with a message..",
+    "image": "Image",
+
+    "change_email": "Change Email",
+    "change_password": "Change Password",
+    "old_password": "Enter old password",
+    "new_password":"Enter new password",
+    "update":"Update",
+
+    "for_free": "For Free",
+    "for_exchange": "For Exchange",
+    "for_metaphore": "For Metaphore",
+    "profile": "Profile",
+    "favorites": "Favorites",
+    "chats": "Chats",
+    "settings": "Settings",
+    "language": "Language",
+    "logout": "Logout",
+
+    "product_info": "Product Info",
+    "call_owner": "Call Owner",
+    "chat_owner": "Chat with Owner",
+    "delete_product":"Delete Product",
+
+    "add_product": "Add Product",
+    "title": "Title",
+    "description":"Description",
+    "upload_photo":"Upload Photo",
+    "post":"Post",
+    "no_image": "You have not yet picked an image"
+}

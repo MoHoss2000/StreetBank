@@ -1,0 +1,59 @@
+{
+    "signin": "تسجيل الدخول",
+    "enter_email": "ادخل البريد الالكتروني",
+    "enter_password": "ادخل كلمة السر",
+    "submit": "متابعة",
+    "forgot_password": "نسيت كلمة السر؟",
+    "no_account": "ليس لديك حساب؟ سجل هنا.",
+    "reset_password_title": "إعادة تعيين كلمة المرور",
+    "reset_password_content": "أرسل بريدك وسنرسل لك بريدًا إلكترونيًا لإعادة تعيين كلمة المرور الخاصة بك",
+    "cancel": "الغاء",
+    "email": "البريد الالكتروني",
+
+    "signup":"الاشتراك",
+    "first_name":"الاسم الاول",
+    "last_name":"الاسم الاخير",
+    "enter_phone":"ادخل رقم الهاتف",
+    "confirm_password":"تأكيد كلمة السر",
+    "have_account":"لديك حساب بالفعل؟ تسجيل الدخول.",
+
+    "name":"الاسم",
+    "phone":"رقم الهاتف",
+
+    "region":"المنطقة",
+    "search":"البحث",
+
+    "messages":"الرسائل",
+
+    "message_box":"ابدأ برسالة",
+    "image": "صورة",
+    
+    "change_email":"تغيير البريد الالكتروني",
+    "change_password":"تغيير كلمة السر",
+    "old_password": "ادخل كلمة السر القديمة",
+    "new_password":"ادخل كلمة السر الجديدة",
+    "update": "تحديث",
+
+    "for_free": "مجاني",
+    "for_exchange":"للتبديل",
+    "for_metaphore":"للاستعارة",
+    "profile":"الملف الشخصي",
+    "favorites": "المفضلة",
+    "chats": "الدردشة",
+    "settings": "الاعدادات",
+    "language": "اللغة",
+    "logout": "تسجيل الخروج",
+
+    "product_info": "معلومات المنتج",
+    "call_owner": "اتصل بالمالك",
+    "chat_owner": "دردش مع المالك",
+    "delete_product":"امسح المنتج",
+
+
+    "add_product": "اضافة منتج",
+    "title": "عنوان المنتج",
+    "description":"وصف المنتج",
+    "upload_photo":"ارفع صورة",
+    "post":"نشر",
+    "no_image": "أنت لم تختار صورة بعد"
+}
