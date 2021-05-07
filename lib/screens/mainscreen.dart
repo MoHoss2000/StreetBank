@@ -164,6 +164,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
     _checkNotification();
     return Scaffold(
       appBar: AppBar(
+        elevation: 10,
         centerTitle: true,
         title: Text("StreetBank"),
       ),

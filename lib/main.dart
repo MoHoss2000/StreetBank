@@ -74,12 +74,12 @@ class _MyAppState extends State<MyApp> {
         print(newtheme.id);
       },
       themes: [
-        AppTheme.dark(id: 'dark'),
+        AppThemes.darkTheme,
         AppThemes.blueTheme,
         AppThemes.pinkTheme,
         AppThemes.greenTheme,
         AppThemes.redTheme,
-        AppTheme.purple(id: "purple"),
+        AppThemes.purpleTheme,
       ],
       child: ThemeConsumer(
         child: Builder(

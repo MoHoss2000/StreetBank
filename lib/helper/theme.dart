@@ -61,6 +61,32 @@ class AppColor {
 }
 
 class AppThemes {
+  // ---- Dark Theme ----
+  static final _darkAccent = Colors.cyan;
+  static final ThemeData _darkThemeData =
+      ThemeData(accentColor: _darkAccent, brightness: Brightness.dark);
+
+  static final darkTheme = AppTheme(
+    data: _darkThemeData,
+    id: "dark",
+    description: "Dark Theme",
+  );
+
+  // ---- Purple Theme ----
+  static final _purplePrimary = Colors.purple;
+  static final _purpleAccent = Colors.pink;
+  static final _purpleBackground = Color(0xFFFFFFFF);
+  static final ThemeData _purpleThemeData = ThemeData(
+      primaryColor: _purplePrimary,
+      accentColor: _purpleAccent,
+      backgroundColor: _purpleBackground);
+
+  static final purpleTheme = AppTheme(
+    data: _purpleThemeData,
+    description: "Purple Theme",
+    id: "purple",
+  );
+
   /// ----  Blue Theme  ----
   static final _bluePrimary = Color(0xFF3F51B5);
   static final _blueAccent = Colors.grey[800];
@@ -69,6 +95,7 @@ class AppThemes {
       primaryColor: _bluePrimary,
       accentColor: _blueAccent,
       backgroundColor: _blueBackground);
+
   static final blueTheme = AppTheme(
     data: _blueThemeData,
     description: "Blue Theme",
@@ -83,6 +110,7 @@ class AppThemes {
       primaryColor: _greenPrimary,
       accentColor: _greenAccent,
       backgroundColor: _greenBackground);
+
   static final greenTheme = AppTheme(
     data: _greenThemeData,
     description: "Green Theme",
@@ -113,7 +141,6 @@ class AppThemes {
     primaryColor: _redPrimary,
     accentColor: _redAccent,
     backgroundColor: _redBackground,
-    // brightness: Brightness.dark,
   );
 
   static final redTheme = AppTheme(
