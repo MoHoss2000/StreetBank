@@ -1,37 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:theme_provider/theme_provider.dart';
 
-List<BoxShadow> shadow = <BoxShadow>[
-  BoxShadow(
-      blurRadius: 10,
-      offset: Offset(5, 5),
-      // color: AppTheme.apptheme.accentColor,
-      spreadRadius: 1)
-];
-String get description {
-  return '';
-}
-
-BoxDecoration softDecoration = BoxDecoration(boxShadow: <BoxShadow>[
-  BoxShadow(
-      blurRadius: 8,
-      offset: Offset(5, 5),
-      color: Color(0xffe2e5ed),
-      spreadRadius: 5),
-  BoxShadow(
-      blurRadius: 8,
-      offset: Offset(-5, -5),
-      color: Color(0xffffffff),
-      spreadRadius: 5)
-], color: Color(0xfff1f3f6));
-TextStyle get titleStyle {
-  return TextStyle(
-    color: Colors.black,
-    fontSize: 16,
-    fontWeight: FontWeight.bold,
-  );
-}
-
 // some colors used in Twitter App
 // not all of them are used but they are kept for future reference (if needed)
 class TwitterColor {
@@ -48,16 +17,6 @@ class TwitterColor {
   static final Color paleSky = Color.fromRGBO(101, 119, 133, 1.0);
   static final Color ceriseRed = Color.fromRGBO(224, 36, 94, 1.0);
   static final Color paleSky50 = Color.fromRGBO(101, 118, 133, 0.5);
-}
-
-class AppColor {
-  static final Color primary = Color(0xff1DA1F2);
-  static final Color secondary = Color(0xff14171A);
-  static final Color darkGrey = Color(0xff1657786);
-  static final Color lightGrey = Color(0xffAAB8C2);
-  static final Color extraLightGrey = Color(0xffE1E8ED);
-  static final Color extraExtraLightGrey = Color(0xfF5F8FA);
-  static final Color white = Color(0xFFffffff);
 }
 
 class AppThemes {

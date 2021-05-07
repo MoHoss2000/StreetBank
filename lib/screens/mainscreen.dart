@@ -277,25 +277,30 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
   }
 
   Widget _buildDarkModeSwitch() {
-    return IconButton(
-      splashColor: Colors.grey,
-      onPressed: animate,
-      iconSize: 48.0,
-      icon: SimpleAnimatedIcon(
-        color: _color.value,
-        // customize icon color
-        size: 48.0,
-        // customize icon size
-        startIcon: Icons.wb_sunny,
-        endIcon: Icons.brightness_2,
-        progress: _progress,
+    return Center(
+      child: IconButton(
+        splashColor: Colors.grey,
+        onPressed: animate,
+        iconSize: 48.0,
+        icon: SimpleAnimatedIcon(
+          color: _color.value,
+          // customize icon color
+          size: 48.0,
+          // customize icon size
+          startIcon: Icons.wb_sunny,
+          endIcon: Icons.brightness_2,
+          progress: _progress,
 
-        // Multiple transitions are applied from left to right.
-        // The order is important especially `slide_in_*` transitions are involved.
-        // In this example, if `slide_in_left` is applied before `zoom_in`,
-        // the slide in effect will be scaled by zoom_in as well, leading to unexpected effect.
-        // transitions: [Transitions.zoom_in, Transitions.slide_in_left],
-        transitions: [Transitions.zoom_in, Transitions.rotate_ccw],
+          // Multiple transitions are applied from left to right.
+          // The order is important especially `slide_in_*` transitions are involved.
+          // In this example, if `slide_in_left` is applied before `zoom_in`,
+          // the slide in effect will be scaled by zoom_in as well, leading to unexpected effect.
+          // transitions: [Transitions.zoom_in, Transitions.slide_in_left],
+          transitions: [
+            Transitions.zoom_in,
+            Transitions.rotate_cw,
+          ],
+        ),
       ),
     );
   }

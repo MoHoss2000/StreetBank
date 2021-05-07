@@ -7,7 +7,6 @@ import 'package:streetbank/models/userModel.dart';
 import 'package:streetbank/states/authState.dart';
 import 'package:streetbank/states/chat/chatState.dart';
 import 'package:streetbank/states/searchState.dart';
-import 'package:streetbank/widgets/customAppBar.dart';
 import 'package:streetbank/widgets/customWidgets.dart';
 import 'package:streetbank/widgets/newWidget/emptyList.dart';
 import 'package:streetbank/widgets/newWidget/title_text.dart';
@@ -126,11 +125,11 @@ class _ChatListPageState extends State<ChatListPage> {
                 children: [
                   Icon(
                     Icons.image,
-                    color: AppColor.darkGrey,
+                    color: Color(0xff1657786),
                   ),
                   SizedBox(width: 5),
                   TitleText(
-                    getTranslation(context, "image"), color: AppColor.darkGrey,
+                    getTranslation(context, "image"), color: Color(0xff1657786),
                     fontWeight: FontWeight.w500,
                     fontSize: 14,
                     // overflow: TextOverflow.ellipsis,
