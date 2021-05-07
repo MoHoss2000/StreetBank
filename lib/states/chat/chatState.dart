@@ -90,9 +90,7 @@ class ChatState extends AppState {
   ///  } ```
   /// For package detail check:-  https://pub.dev/packages/firebase_remote_config#-readme-tab-
   void getFCMServerKey() async {
-    final RemoteConfig remoteConfig = await RemoteConfig.instance;
-    // await remoteConfig.fetch(
-    //     expiration: const Duration(days: 5)); // looks for the key every 5 days
+    final RemoteConfig remoteConfig = RemoteConfig.instance;
 
     await remoteConfig.fetch();
     await remoteConfig.activate();
@@ -113,7 +111,7 @@ class ChatState extends AppState {
           .collection(CHAT_USER_LIST_COLLECTION)
           .get()
           .then((QuerySnapshot snapshot) {
-        _chatUserList = List<ChatMessage>();
+        _chatUserList = [];
         if (snapshot != null && snapshot.docs.isNotEmpty) {
           for (var i = 0; i < snapshot.docs.length; i++) {
             final model =
@@ -231,7 +229,7 @@ class ChatState extends AppState {
   // / Method will trigger every time when you send/recieve  from/to someone messgae.
   void _onMessageAdded(DocumentSnapshot snapshot) {
     if (_messageList == null) {
-      _messageList = List<ChatMessage>();
+      _messageList = [];
     }
     if (snapshot.data() != null) {
       var map = snapshot.data();
@@ -265,9 +263,9 @@ class ChatState extends AppState {
   // handles sending a notification to the receiver through FCM
   void sendAndRetrieveMessage(ChatMessage model) async {
     print("sending message $serverToken");
-
     await firebaseMessaging.requestPermission();
     if (chatUser.fcmToken == null) {
+      print("NULL TOKEN");
       return;
     }
 
@@ -293,7 +291,8 @@ class ChatState extends AppState {
     });
 
     // sending HTTP request
-    Uri uri = Uri.parse('https://fcm.googleapis.com/fcm/send');
+    // Uri uri = new Uri(host: 'https://fcm.googleapis.com/fcm/send');
+    Uri uri = Uri.https("fcm.googleapis.com", "/fcm/send");
     var response = await http.post(uri,
         headers: <String, String>{
           'Content-Type': 'application/json',

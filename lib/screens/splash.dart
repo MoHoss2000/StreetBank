@@ -9,7 +9,6 @@ import 'package:streetbank/helper/enum.dart';
 import 'package:streetbank/helper/theme.dart';
 import 'package:streetbank/main.dart';
 import 'package:streetbank/screens/authentication/login.dart';
-import 'package:streetbank/screens/mainscreen.dart';
 import 'package:streetbank/states/authState.dart';
 import 'package:streetbank/widgets/customWidgets.dart';
 import 'package:streetbank/widgets/newWidget/title_text.dart';
@@ -42,11 +41,17 @@ class _SplashPageState extends State<SplashPage> {
       await state.getCurrentUser();
       AuthStatus authStatus = state.authStatus;
       if (authStatus == AuthStatus.NOT_LOGGED_IN) {
-        Navigator.pushReplacementNamed(context, "/login");
+        Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Login(
+              loginCallback: state.getCurrentUser,
+            ),
+          ),
+          (route) => false,
+        );
       }
       if (authStatus == AuthStatus.LOGGED_IN) {
-        print("TEST: " + ThemeProvider.controllerOf(context).currentThemeId);
-
         Navigator.pushReplacementNamed(context, "/main");
       }
     });

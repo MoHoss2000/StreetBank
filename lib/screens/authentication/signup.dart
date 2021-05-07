@@ -9,6 +9,7 @@ import 'package:streetbank/screens/authentication/login.dart';
 import 'package:streetbank/states/authState.dart';
 import 'package:streetbank/widgets/customWidgets.dart';
 import 'package:streetbank/widgets/newWidget/customLoader.dart';
+import 'package:theme_provider/theme_provider.dart';
 
 class Signup extends StatefulWidget {
   final VoidCallback loginCallback;
@@ -112,7 +113,9 @@ class _SignupState extends State<Signup> {
           color: Theme.of(context).accentColor,
           width: 1.5,
         ),
-        color: Colors.grey.shade200,
+        color: ThemeProvider.controllerOf(context).currentThemeId == "dark"
+            ? Colors.grey[0]
+            : Colors.grey[200],
         borderRadius: BorderRadius.circular(30),
       ),
       child: TextField(

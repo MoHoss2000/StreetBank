@@ -42,7 +42,15 @@
     "chats": "Chats",
     "settings": "Settings",
     "language": "Language",
+    "theme": "Theme",
+    "select_theme": "Select Theme",
     "logout": "Logout",
+
+    "blue": "Blue",
+    "pink": "Pink",
+    "green": "Green",
+    "red": "Red",
+    "purple": "Purple",
 
     "product_info": "Product Info",
     "call_owner": "Call Owner",

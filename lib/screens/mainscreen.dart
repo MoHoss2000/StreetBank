@@ -19,9 +19,11 @@ import 'package:streetbank/states/authState.dart';
 import 'package:streetbank/states/chat/chatState.dart';
 import 'package:streetbank/states/notificationState.dart';
 import 'package:streetbank/states/searchState.dart';
+import 'package:streetbank/widgets/themeDialog.dart';
 import 'package:theme_provider/theme_provider.dart';
 
 import '../main.dart';
+import 'authentication/login.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -203,16 +205,23 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
             _buildLanguageMenu(),
             ThemeProvider.controllerOf(context).currentThemeId != "dark"
                 ? _buildDrawerListTile(
-                    "Theme",
+                    getTranslation(context, "theme"),
                     Icons.color_lens,
                     () {
-                      // showDialog(
-                      //   context: context,
-                      //   builder: (_) => ThemeDialog(),
-                      // );
                       showDialog(
-                          context: context,
-                          builder: (_) => ThemeConsumer(child: ThemeDialog()));
+                        context: context,
+                        builder: (_) => ThemeConsumer(
+                          child: CustomThemeDialog(
+                            hasDescription: false,
+                            title: Text(
+                              getTranslation(
+                                context,
+                                "select_theme",
+                              ),
+                            ),
+                          ),
+                        ),
+                      );
                     },
                   )
                 : Container(),
@@ -220,8 +229,14 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
                 getTranslation(context, "logout"), Icons.logout, () async {
               final state = Provider.of<AuthState>(context, listen: false);
               await state.logoutCallback();
-              Navigator.pushNamedAndRemoveUntil(
-                  context, "/login", (route) => false);
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      Login(loginCallback: state.getCurrentUser),
+                ),
+                (route) => false,
+              );
             }),
           ],
         ),
@@ -431,11 +446,11 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
           ),
           boxShadow: [
             BoxShadow(
-              offset: Offset(10, 15),
-              color: TwitterColor.black,
+              offset: Offset(3, 4),
+              color: Colors.black,
               // color: Theme.of(context).accentColor,
-              blurRadius: 30.0,
-              spreadRadius: 2,
+              blurRadius: 5.0,
+              spreadRadius: 0.5,
             ),
           ],
           gradient: LinearGradient(

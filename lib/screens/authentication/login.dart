@@ -51,7 +51,7 @@ class _LoginState extends State<Login> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 75),
+            SizedBox(height: 30),
             Image.asset(
               "assets/images/logo.png",
               height: 200,

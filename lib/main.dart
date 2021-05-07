@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -90,8 +91,6 @@ class _MyAppState extends State<MyApp> {
               ChangeNotifierProvider<ChatState>(create: (_) => ChatState()),
               ChangeNotifierProvider<NotificationState>(
                   create: (_) => NotificationState()),
-              // ChangeNotifierProvider<ThemeNotifier>(
-              //     create: (_) => ThemeNotifier(AppTheme.blueTheme), child: MyApp())
             ],
             child: MaterialApp(
               supportedLocales: [

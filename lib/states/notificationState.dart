@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:streetbank/helper/constants.dart';
 import 'package:streetbank/helper/enum.dart';
@@ -66,7 +66,7 @@ class NotificationState extends AppState {
     //     cprint("Notification ", event: "onLaunch");
     //     var data = message['data'];
     //     // print(message['data']);
-    //     notificationSenderId = data["senderId"];
+    // notificationSenderId = data["senderId"];
     //     notificationReciverId = data["receiverId"];
     //     notificationReciverId = data["receiverId"];
     //     if (data["type"] == "NotificationType.Message") {
@@ -86,6 +86,7 @@ class NotificationState extends AppState {
     //     notifyListeners();
     //   },
     // );
+    // FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
 
     _firebaseMessaging.requestPermission();
 
@@ -95,4 +96,12 @@ class NotificationState extends AppState {
       print(token);
     });
   }
+}
+
+Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+  // If you're going to use other Firebase services in the background, such as Firestore,
+  // make sure you call `initializeApp` before using other Firebase services.
+  await Firebase.initializeApp();
+
+  print("Handling a background message: ${message.messageId}");
 }

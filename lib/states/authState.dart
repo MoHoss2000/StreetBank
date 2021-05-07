@@ -107,7 +107,7 @@ class AuthState extends AppState {
     _userModel = user;
 
     if (_profileUserModelList != null) {
-      _profileUserModelList.last = _userModel;
+      _profileUserModelList.add(_userModel);
     }
     loading = false;
   }
@@ -175,6 +175,7 @@ class AuthState extends AppState {
       if (documentSnapshot.data() != null) {
         _profileUserModelList.add(UserModel.fromJson(documentSnapshot.data()));
 
+        print("USER TOKEN " + _userModel.fcmToken);
         if (_userModel.fcmToken == null) {
           updateFCMToken();
         }
