@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:streetbank/helper/theme.dart';
 import 'package:streetbank/widgets/newWidget/title_text.dart';
 import 'package:theme_provider/theme_provider.dart';
 

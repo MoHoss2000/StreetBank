@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:streetbank/helper/theme.dart';
 import 'package:streetbank/helper/utility.dart';
 import 'package:theme_provider/theme_provider.dart';
 

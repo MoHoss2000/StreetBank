@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FullScreenImage extends StatefulWidget {
-  String photoUrl;
+  final String photoUrl;
   FullScreenImage({this.photoUrl});
 
   _FullScreenImageState createState() => _FullScreenImageState();

@@ -12,7 +12,6 @@ import 'package:streetbank/Screens/profile.dart';
 import 'package:streetbank/Screens/update_user.dart';
 import 'package:streetbank/helper/enum.dart';
 import 'package:streetbank/helper/routes.dart';
-import 'package:streetbank/helper/theme.dart';
 import 'package:streetbank/helper/utility.dart';
 import 'package:streetbank/models/languageModel.dart';
 import 'package:streetbank/states/authState.dart';

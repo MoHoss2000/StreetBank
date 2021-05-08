@@ -1,13 +1,7 @@
-import 'dart:io';
-
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-
-import 'package:image_picker/image_picker.dart';
-import 'package:streetbank/helper/theme.dart';
 
 Widget customTitleText(String title, {BuildContext context}) {
   return Text(
@@ -65,7 +59,7 @@ Widget customText(String msg,
   } else {
     if (context != null && style != null) {
       var fontSize =
-          style.fontSize ?? Theme.of(context).textTheme.body1.fontSize;
+          style.fontSize ?? Theme.of(context).textTheme.bodyText2.fontSize;
       style = style.copyWith(
         fontSize: fontSize - (fullWidth(context) <= 375 ? 2 : 0),
       );
@@ -128,7 +122,8 @@ void customSnackBar(GlobalKey<ScaffoldState> _scaffoldKey, String msg,
   if (_scaffoldKey == null || _scaffoldKey.currentState == null) {
     return;
   }
-  _scaffoldKey.currentState.hideCurrentSnackBar();
+  // _scaffoldKey.currentState.hideCurrentSnackBar();
+  ScaffoldMessenger.of(_scaffoldKey.currentContext).hideCurrentSnackBar();
   final snackBar = SnackBar(
     duration: Duration(seconds: 4),
     backgroundColor: backgroundColor,
@@ -139,7 +134,9 @@ void customSnackBar(GlobalKey<ScaffoldState> _scaffoldKey, String msg,
       ),
     ),
   );
-  _scaffoldKey.currentState.showSnackBar(snackBar);
+
+  ScaffoldMessenger.of(_scaffoldKey.currentContext).showSnackBar(snackBar);
+  // _scaffoldKey.currentState.showSnackBar(snackBar);
 }
 
 void displayToastMessage(String msg, BuildContext context) {

@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:streetbank/helper/theme.dart';
 import 'package:streetbank/helper/utility.dart';
 import 'package:streetbank/widgets/customWidgets.dart';
 import 'package:streetbank/widgets/newWidget/customLoader.dart';

@@ -22,8 +22,15 @@ class TwitterColor {
 class AppThemes {
   // ---- Dark Theme ----
   static final _darkAccent = Colors.cyan;
-  static final ThemeData _darkThemeData =
-      ThemeData(accentColor: _darkAccent, brightness: Brightness.dark);
+  static final ThemeData _darkThemeData = ThemeData(
+    accentColor: _darkAccent,
+    brightness: Brightness.dark,
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
+      ),
+    ),
+  );
 
   static final darkTheme = AppTheme(
     data: _darkThemeData,
@@ -31,11 +38,19 @@ class AppThemes {
     description: "Dark Theme",
   );
 
+  static final ThemeData _lightThemeData = ThemeData(
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        foregroundColor: MaterialStateProperty.all<Color>(Colors.black),
+      ),
+    ),
+  );
+
   // ---- Purple Theme ----
   static final _purplePrimary = Colors.purple;
   static final _purpleAccent = Colors.pink;
   static final _purpleBackground = Color(0xFFFFFFFF);
-  static final ThemeData _purpleThemeData = ThemeData(
+  static final ThemeData _purpleThemeData = _lightThemeData.copyWith(
       primaryColor: _purplePrimary,
       accentColor: _purpleAccent,
       backgroundColor: _purpleBackground);
@@ -50,7 +65,7 @@ class AppThemes {
   static final _bluePrimary = Color(0xFF3F51B5);
   static final _blueAccent = Colors.grey[800];
   static final _blueBackground = Color(0xFFFFFFFF);
-  static final ThemeData _blueThemeData = ThemeData(
+  static final ThemeData _blueThemeData = _lightThemeData.copyWith(
       primaryColor: _bluePrimary,
       accentColor: _blueAccent,
       backgroundColor: _blueBackground);
@@ -65,7 +80,7 @@ class AppThemes {
   static final _greenPrimary = Color(0xFF4CAF50);
   static final _greenAccent = Color(0xFF631739);
   static final _greenBackground = Color(0xFFFFFFFF);
-  static final _greenThemeData = ThemeData(
+  static final _greenThemeData = _lightThemeData.copyWith(
       primaryColor: _greenPrimary,
       accentColor: _greenAccent,
       backgroundColor: _greenBackground);
@@ -80,7 +95,7 @@ class AppThemes {
   static final _pinkPrimary = Color(0xFFE91E63);
   static final _pinkAccent = Color(0xFF0C7D9C);
   static final _pinkBackground = Color(0xFFFFFFFF);
-  static final _pinkThemeData = ThemeData(
+  static final _pinkThemeData = _lightThemeData.copyWith(
     primaryColor: _pinkPrimary,
     accentColor: _pinkAccent,
     backgroundColor: _pinkBackground,
@@ -96,7 +111,7 @@ class AppThemes {
   static final _redPrimary = Colors.red[900];
   static final _redAccent = Colors.black;
   static final _redBackground = Color(0xFFFFFFFF);
-  static final _redThemeData = ThemeData(
+  static final _redThemeData = _lightThemeData.copyWith(
     primaryColor: _redPrimary,
     accentColor: _redAccent,
     backgroundColor: _redBackground,

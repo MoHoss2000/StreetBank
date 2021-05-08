@@ -22,10 +22,10 @@ class SearchState extends AppState {
     try {
       isBusy = true;
       if (_userFilterlist == null) {
-        _userFilterlist = List<UserModel>();
+        _userFilterlist = [];
       } else {}
       if (_userlist == null) {
-        _userlist = List<UserModel>();
+        _userlist = [];
       }
       _userFilterlist.clear();
       _userlist.clear();

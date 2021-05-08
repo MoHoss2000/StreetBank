@@ -36,7 +36,7 @@ class UserModel {
     createdAt = map['createdAt'];
     fcmToken = map['fcmToken'];
     if (map['favoritesList'] != null) {
-      favoritesList = List<String>();
+      favoritesList = [];
       map['favoritesList'].forEach((value) {
         favoritesList.add(value);
       });

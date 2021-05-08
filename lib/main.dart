@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
@@ -113,7 +112,8 @@ class _MyAppState extends State<MyApp> {
               locale: _locale,
               debugShowCheckedModeBanner: false,
               title: 'StreetBank',
-              theme: ThemeProvider.themeOf(themeContext).data,
+              // theme: ThemeProvider.themeOf(themeContext).data,
+              theme: AppThemes.darkTheme.data,
               routes: Routes.route(),
               onGenerateRoute: (settings) => Routes.onGenerateRoute(settings),
               onUnknownRoute: (settings) => Routes.onUnknownRoute(settings),

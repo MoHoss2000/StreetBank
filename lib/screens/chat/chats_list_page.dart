@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:streetbank/helper/theme.dart';
 import 'package:streetbank/helper/utility.dart';
 import 'package:streetbank/models/chatModel.dart';
 import 'package:streetbank/models/userModel.dart';

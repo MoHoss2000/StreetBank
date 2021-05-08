@@ -155,8 +155,9 @@ class _ChatScreenPageState extends State<ChatScreenPage> {
                               onLongPress: () {
                                 var text = ClipboardData(text: chat.message);
                                 Clipboard.setData(text);
-                                _scaffoldKey.currentState.hideCurrentSnackBar();
-                                _scaffoldKey.currentState.showSnackBar(
+                                ScaffoldMessenger.of(context)
+                                    .hideCurrentSnackBar();
+                                ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     backgroundColor: TwitterColor.white,
                                     content: Text(

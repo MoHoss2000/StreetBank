@@ -136,8 +136,11 @@ class _AddProductState extends State<AddProduct> {
   /// uploads image to cloud storage
   Future<UploadTask> uploadFile(PickedFile file) async {
     if (file == null) {
-      Scaffold.of(context)
-          .showSnackBar(SnackBar(content: Text("No file was selected")));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("No file was selected"),
+        ),
+      );
       return null;
     }
 

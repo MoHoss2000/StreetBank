@@ -83,7 +83,7 @@ class CustomScreenLoader extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.all(50),
           decoration: BoxDecoration(
-              color: Colors.white,
+              color: Theme.of(context).backgroundColor,
               borderRadius: BorderRadius.all(Radius.circular(10))),
           child: Stack(
             alignment: Alignment.center,

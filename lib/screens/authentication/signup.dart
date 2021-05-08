@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:streetbank/helper/enum.dart';
 import 'package:streetbank/helper/routes.dart';
-import 'package:streetbank/helper/theme.dart';
 import 'package:streetbank/helper/utility.dart';
 import 'package:streetbank/models/userModel.dart';
 import 'package:streetbank/screens/authentication/login.dart';
@@ -216,7 +215,7 @@ class _SignupState extends State<Signup> {
             customText(
               getTranslation(context, "signup"),
               context: context,
-              style: TextStyle(fontSize: 35),
+              style: TextStyle(fontSize: 20),
             ),
             SizedBox(height: 20),
           ],

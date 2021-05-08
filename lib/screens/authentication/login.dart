@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
 import 'package:streetbank/helper/routes.dart';
-import 'package:streetbank/helper/theme.dart';
 import 'package:streetbank/helper/utility.dart';
 import 'package:streetbank/screens/authentication/signup.dart';
 import 'package:streetbank/states/authState.dart';
@@ -72,7 +71,9 @@ class _LoginState extends State<Login> {
               _showResetPassword(); // opens dialog to reset password
             }),
             FlatButton(
-              child: Text(getTranslation(context, "no_account")),
+              child: Text(
+                getTranslation(context, "no_account"),
+              ),
               onPressed: () {
                 var state = Provider.of<AuthState>(context, listen: false);
                 Navigator.pushAndRemoveUntil(

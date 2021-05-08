@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +10,6 @@ import 'package:streetbank/screens/authentication/login.dart';
 import 'package:streetbank/states/authState.dart';
 import 'package:streetbank/widgets/customWidgets.dart';
 import 'package:streetbank/widgets/newWidget/title_text.dart';
-import 'package:theme_provider/theme_provider.dart';
 
 class SplashPage extends StatefulWidget {
   SplashPage({Key key}) : super(key: key);
@@ -109,25 +106,9 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    var state = Provider.of<AuthState>(context);
-
     return Scaffold(
       backgroundColor: Theme.of(context).primaryColor,
       body: _body(),
-      //  state.authStatus == AuthStatus.NOT_DETERMINED
-      //     ? _body()
-      //     : Login(
-      //         loginCallback: state.getCurrentUser,
-      //       )
-
-      /// if not determined show splash screen
-
-      // : state.authStatus == AuthStatus.NOT_LOGGED_IN
-      //     ? Login(
-      //         loginCallback: state.getCurrentUser,
-      //       )
-      //     : MaterialPageRoute(builder: (context) => MainScreen()),
-      // MainScreen(), // if logged in show main app screen,
     );
   }
 }
