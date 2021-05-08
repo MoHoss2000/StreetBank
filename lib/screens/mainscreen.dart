@@ -312,8 +312,6 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
         style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,
-          // color: Theme.of(context).mode
-          // color: Theme.of(context).brightness == Brightness.dark
           color: ThemeProvider.themeOf(context).id == 'dark'
               ? Theme.of(context).accentColor
               : Theme.of(context).primaryColor,

@@ -67,11 +67,10 @@ class _LoginState extends State<Login> {
               isPassword: true,
             ),
             _emailLoginButton(context),
-            _labelButton(
-              getTranslation(context, "forgot_password"),
-              onPressed: () =>
-                  _showResetPassword, // opens dialog to reset password
-            ),
+            _labelButton(getTranslation(context, "forgot_password"),
+                onPressed: () {
+              _showResetPassword(); // opens dialog to reset password
+            }),
             FlatButton(
               child: Text(getTranslation(context, "no_account")),
               onPressed: () {
@@ -97,7 +96,9 @@ class _LoginState extends State<Login> {
 
   // form text field with custom style
   Widget _entryField(String hint,
-      {TextEditingController controller, bool isPassword = false}) {
+      {TextEditingController controller,
+      bool isPassword = false,
+      double fontSize}) {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 15),
       decoration: BoxDecoration(
@@ -114,6 +115,7 @@ class _LoginState extends State<Login> {
         controller: controller,
         keyboardType: TextInputType.emailAddress,
         style: TextStyle(
+          fontSize: fontSize,
           fontStyle: FontStyle.normal,
           fontWeight: FontWeight.normal,
         ),
@@ -131,13 +133,12 @@ class _LoginState extends State<Login> {
   }
 
   Widget _labelButton(String title, {Function onPressed}) {
-    return FlatButton(
+    return TextButton(
       onPressed: () {
         if (onPressed != null) {
           onPressed();
         }
       },
-      splashColor: Colors.grey.shade200,
       child: Text(
         title,
         style: TextStyle(
@@ -201,7 +202,7 @@ class _LoginState extends State<Login> {
             backgroundColor: Colors.transparent,
             child: Container(
               decoration: BoxDecoration(
-                  color: TwitterColor.white,
+                  color: Theme.of(context).backgroundColor,
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                   boxShadow: [
                     BoxShadow(
@@ -225,13 +226,16 @@ class _LoginState extends State<Login> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 8),
+                    SizedBox(height: 12),
                     Text(
                       getTranslation(context, "reset_password_content"),
                       style: TextStyle(fontSize: 14),
                     ),
-                    _entryField(getTranslation(context, "email"),
-                        controller: controller),
+                    _entryField(
+                      getTranslation(context, "email"),
+                      controller: controller,
+                      fontSize: 14,
+                    ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
