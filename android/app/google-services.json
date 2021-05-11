@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "320707129575",
-    "project_id": "streetbank-770a1",
-    "storage_bucket": "streetbank-770a1.appspot.com"
+    "project_number": "661232947567",
+    "project_id": "streetbank-3d75c",
+    "storage_bucket": "streetbank-3d75c.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:320707129575:android:773f6ae471ecd33ceff242",
+        "mobilesdk_app_id": "1:661232947567:android:63ee4a7311dd793262989a",
         "android_client_info": {
           "package_name": "com.example.streetbank"
         }
       },
       "oauth_client": [
         {
-          "client_id": "320707129575-9jd20nmj8reftbi5dqc0ob19a4gn6v1e.apps.googleusercontent.com",
+          "client_id": "661232947567-eepsj86cqtn0kajbss5rpadi7se4cgo8.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD2YO-n6BUEq4Ak_RAYa8HbmQH_roFcCLM"
+          "current_key": "AIzaSyCQ8f9OpGgkoBmxmeF0EPghi35PEXMJzjA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "320707129575-9jd20nmj8reftbi5dqc0ob19a4gn6v1e.apps.googleusercontent.com",
+              "client_id": "661232947567-eepsj86cqtn0kajbss5rpadi7se4cgo8.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

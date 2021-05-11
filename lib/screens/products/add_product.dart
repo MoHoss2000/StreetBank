@@ -93,6 +93,8 @@ class _AddProductState extends State<AddProduct> {
                         style: TextStyle(fontSize: 20),
                       ),
                       onPressed: () {
+                        // print(region);
+                        // print(region.runtimeType);
                         if (productTitleController.text.isEmpty) {
                           displayToastMessage(
                               "Please add a title for your product", context);
@@ -101,7 +103,7 @@ class _AddProductState extends State<AddProduct> {
                           displayToastMessage(
                               "Description must be at least 5 characters",
                               context);
-                        } else if (region == "") {
+                        } else if (region?.isEmpty ?? true) {
                           displayToastMessage("Choose a region", context);
                         } else
                           addProduct(context);

@@ -128,6 +128,10 @@ class AuthState extends AppState {
       loading = true;
       logEvent('get_currentUSer');
 
+      try {
+        await _firebaseAuth.currentUser.reload();
+      } catch (error) {}
+
       user = _firebaseAuth.currentUser;
       if (user != null) {
         authStatus = AuthStatus.LOGGED_IN;

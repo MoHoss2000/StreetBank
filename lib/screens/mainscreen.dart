@@ -18,6 +18,7 @@ import 'package:streetbank/states/authState.dart';
 import 'package:streetbank/states/chat/chatState.dart';
 import 'package:streetbank/states/notificationState.dart';
 import 'package:streetbank/states/searchState.dart';
+import 'package:streetbank/widgets/processDialog.dart';
 import 'package:streetbank/widgets/themeDialog.dart';
 import 'package:theme_provider/theme_provider.dart';
 

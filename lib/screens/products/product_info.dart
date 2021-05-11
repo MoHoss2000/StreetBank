@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'package:streetbank/helper/utility.dart';
 import 'package:streetbank/models/userModel.dart';
 import 'package:streetbank/states/chat/chatState.dart';
+import 'package:streetbank/states/searchState.dart';
 import 'package:streetbank/widgets/newWidget/customLoader.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -79,15 +80,21 @@ class ProductInfo extends StatelessWidget {
                                     Text(getTranslation(context, "chat_owner")),
                                 onPressed: () {
                                   /// starts chat with owner
-                                  UserModel user = UserModel(
-                                      firstName: ownerData["firstName"],
-                                      lastName: ownerData["lastName"],
-                                      userId: ownerData["userId"],
-                                      email: ownerData["email"]);
                                   final chatState = Provider.of<ChatState>(
                                       context,
                                       listen: false);
+                                  final searchState = Provider.of<SearchState>(
+                                      context,
+                                      listen: false);
+
+                                  UserModel user =
+                                      searchState.userlist.firstWhere(
+                                    (x) => x.userId == ownerData["userId"],
+                                    orElse: () => UserModel(userId: "Unknown"),
+                                  );
+
                                   chatState.setChatUser = user;
+
                                   Navigator.pushNamed(
                                       context, '/ChatScreenPage');
                                 },
